@@ -147,9 +147,9 @@ int main()
 
         // update shader uniform
         double  timeValue = glfwGetTime();
-        float greenValue = static_cast<float>(sin(timeValue) / 2.0 + 0.5);
-        int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
-        glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
+        float greenValue = static_cast<float>(sin(timeValue) / 2.0 + 0.5); //얘를 시간따라 바꿈.
+        int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor"); //ourColor에 host ourcolor의 위치를 반환
+        glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);//이 함수는 uniform 변수 재설정
 
         // render the triangle
         glDrawArrays(GL_TRIANGLES, 0, 3);
