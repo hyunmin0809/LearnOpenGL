@@ -33,11 +33,12 @@ int main()
         return -1;
     }
     glfwMakeContextCurrent(window);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback); 
+    //callback function 윈도우 기반은 전부 콜백 사용. 메시지 패싱. 메시지 처리를 누가 처리하냐 지정. 이 funtion은 내가 만들어줘야함. framebuffer 새로 만들어졌을때.
 
     // glad: load all OpenGL function pointers
     // ---------------------------------------
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) // glad init 파트
     {
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
@@ -45,7 +46,7 @@ int main()
 
     // render loop
     // -----------
-    while (!glfwWindowShouldClose(window))
+    while (!glfwWindowShouldClose(window)) //render loop 계쏙 도는중.
     {
         // input
         // -----

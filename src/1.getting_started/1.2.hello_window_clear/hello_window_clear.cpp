@@ -54,7 +54,7 @@ int main()
         // render
         // ------
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT);//frame buffer 중 color buffer에 해당하는 부분을 깨끗하게 지워라. 근데 지우는데 어떤 색으로 지울 거냐. 위에서 지정해둠.
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
